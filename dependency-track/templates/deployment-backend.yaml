@@ -42,6 +42,7 @@ spec:
           - name: data
             mountPath: /data
           livenessProbe:
+            port: api
             path: "/api/version"
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -49,6 +50,7 @@ spec:
             successThreshold: 1
             failureThreshold: 3
           readinessProbe:
+            port: api
             path: "/"
             initialDelaySeconds: 60
             periodSeconds: 10
