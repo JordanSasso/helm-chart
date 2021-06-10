@@ -3,9 +3,9 @@ entries:
   dependency-track:
   - apiVersion: v2
     appVersion: 4.2.0
-    created: "2021-06-10T12:33:34.162216-04:00"
+    created: "2021-06-10T12:38:34.269878-04:00"
     description: A Helm chart for Dependency-Track
-    digest: 367c0dde9197e3943482d3f5d013cf7f42438e04be45158f85338c39b7888497
+    digest: f82e82a55cd4caae578fe8ec97acb058399c2ab05e24a387da0cedf7035e2ddc
     home: https://docs.dependencytrack.org/
     icon: https://docs.dependencytrack.org/images/dt-logo-white-text.svg
     name: dependency-track
@@ -14,4 +14,4 @@ entries:
     urls:
     - charts/dependency-track-2.0.3.tgz
     version: 2.0.3
-generated: "2021-06-10T12:33:34.161303-04:00"
+generated: "2021-06-10T12:38:34.268673-04:00"
