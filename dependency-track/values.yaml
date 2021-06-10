@@ -2,10 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-global:
-  # imagePullSecrets:
-  #   - name: "myRegistryKeySecretName"
-
 frontend:
   replicaCount: 1
 
@@ -13,6 +9,8 @@ frontend:
     repository: dependencytrack/frontend
     tag: 4.2.0
     pullPolicy: IfNotPresent
+
+  imagePullSecrets: []
 
   service:
     type: ClusterIP
