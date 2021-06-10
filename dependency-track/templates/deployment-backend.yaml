@@ -42,15 +42,19 @@ spec:
           - name: data
             mountPath: /data
           livenessProbe:
-            httpGet:
-              port: 8080
-              path: /
-            initialDelaySeconds: 45
+            path: "/api/version"
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
           readinessProbe:
-            httpGet:
-              port: 8080
-              path: /
-            initialDelaySeconds: 45
+            path: "/"
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
           resources:
 {{ toYaml .Values.backend.resources | indent 12 }}
           env:
